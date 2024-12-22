@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input id="name" type="text" placeholder="enter student name" />
+      <input type="text" name="" id="roll" placeholder="enter roll number" />
+      <input type="submit" name="" id="" value="submit" />
+    </form>
+  </body>
+</html>
+
+<script>
+  document.querySelector("form").addEventListener("submit", addStudent);
+
+  studentData = [];
+
+  function addStudent() {
+    event.preventDefault();
+    var obj = {
+      name: document.querySelector("#name").value,
+      roll: document.querySelector("#roll").value,
+    };
+    // console.log(obj);
+    studentData.push(obj);
+    console.log(studentData);
+    displayStudents(studentData);
+  }
+
+  function displayStudents(studentData) {
+    studentData.array.forEach((element) => {});
+  }
+</script>
