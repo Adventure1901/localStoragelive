@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="count">0</h1>
+    <button onclick="incre()">Increase</button>
+    <button onclick="decre()">Decrease</button>
+  </body>
+</html>
+
+<script>
+  let count = 0;
+  bag = [];
+  function incre(out) {
+    count++;
+    document.getElementById("count").innerText = count;
+    bag.push(count);
+    localStorage.setItem("counter", bag);
+
+    console.log(localStorage.getItem("counter"));
+  }
+
+  function decre(output) {
+    count--;
+    document.getElementById("count").innerText = count;
+    bag.push(count);
+    localStorage.setItem("counter", bag);
+
+    console.log(localStorage.getItem("counter"));
+  }
+</script>
